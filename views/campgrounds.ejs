@@ -1,0 +1,70 @@
+
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+<!-- header goes here -->
+<div class="container">
+<div class="container">
+<header class="jumbotron"> 
+    <div class="container">
+    <h1>WELCOME TO YELPCAMP</h1>
+    <P>This views are from all over the world</P>
+    <br>
+    <a class="btn btn-primary btn-large" href="/campground/new" >WELCOME TO YELP CAMP</a>
+</div>
+</header>
+</div>
+
+<!-- //headerer ends headerer -->
+
+
+<div class="container">
+    <div class="row">
+        <hr class="my-4">
+
+        <div class="col col-lg-12">
+            <h4>Our Most popular camp  grounds </h4>
+        </div>
+    
+
+    </div>
+
+</div>
+
+
+
+
+
+<div class="row">
+
+    <% campgrounds.forEach(function(campground){ %>
+        
+
+        <div class="col col-md-auto col-sm-auto">
+    <div class="img-thumbnail " style=" margin: 10px 0 ;">
+        <img src="<%= campground.image %>" alt="#" width="300" height="300">
+        <div class="caption"><h4><%= campground.name %></h4> </div>
+    </div>
+</div>
+    <%});%> 
+
+</div>
+
+
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('div').click(function(){
+
+$(this).hide();
+    });
+    });
+  
+</script>
+
+
+
+    <!-- footer  -->
+    <%- include ('partials/footer.ejs')  %>  
+    

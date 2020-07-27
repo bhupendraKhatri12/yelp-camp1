@@ -1,0 +1,33 @@
+<%- include ('partials/header') %>
+<%- include ('partials/navbar.ejs') %>
+
+<h1>This is  a Landing Page</h1>
+
+
+
+<a href="/campground">Welcome to the campground page</a>
+
+<div class="container" style="height: 200px; width: 200px; background-color: bisque;"></div>
+
+<span >
+    <p>This is text</p>
+</span>
+
+<script>
+    $('span').hide();
+    $(document).ready(function(e){
+       
+            $('div').click(function(){
+                
+$(this).append($('span').show());
+    });
+    });
+        
+        
+
+  
+</script>
+
+
+<%- include ('partials/footer')  %>  
+
